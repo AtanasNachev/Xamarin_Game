@@ -23,6 +23,7 @@
                 HorizontalOptions="CenterAndExpand"></Label>
             <Entry x:Name="gameAnotation"></Entry>
             <Button x:Name="SaveGameInfo" Clicked="saveGameInfo" Text="Save Game Info"></Button>
+            <Button x:Name="cancelButton" Clicked="cancel" Text="Cancel"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

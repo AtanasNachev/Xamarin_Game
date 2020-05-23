@@ -28,9 +28,6 @@ namespace Guide
         void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             Game selectedItem = e.SelectedItem as Game;
-            // App.Navigation.PushAsync(new MainPage());
-
-
             NavigationPage nav = new NavigationPage(new GamePage(selectedItem) { Title = "Game Information" });
             Application.Current.MainPage = nav;
         }

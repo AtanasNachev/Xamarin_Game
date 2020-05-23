@@ -25,14 +25,20 @@ namespace Guide
         private void RemoveGame(object sender, EventArgs e)
         {
             App.Games.Remove(_game);
-            Navigation.PushAsync(new MainPage());
+            NavigationPage nav = new NavigationPage(new MainPage() { Title = "Games" });
+            Application.Current.MainPage = nav;
         }
 
 
         private void updateGameInfo(object sender, EventArgs e)
         {
-            App.Games.Remove(_game);
-            Navigation.PushAsync(new GameInfoPage(_game));
+            Navigation.PushAsync(new GameInfoPage(_game) { Title = "Update Game Info" });
+        }
+
+        private void back(object sender, EventArgs e)
+        {
+            NavigationPage nav = new NavigationPage(new MainPage() { Title = "Games" });
+            Application.Current.MainPage = nav;
         }
     }
 }

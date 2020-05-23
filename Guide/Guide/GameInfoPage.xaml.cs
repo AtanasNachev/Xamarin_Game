@@ -12,9 +12,11 @@ namespace Guide
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GameInfoPage : ContentPage
     {
+        private Game _game;
         public GameInfoPage(Game game)
         {
             InitializeComponent();
+            _game = game;
             gameName.Text = game.Name;
             gameImageUrl.Text = game.ImageUrl;
             gameAnotation.Text = game.Anotaion;
@@ -28,7 +30,16 @@ namespace Guide
             game.ImageUrl = gameImageUrl.Text;
             game.Anotaion = gameAnotation.Text;
             App.Games.Add(game);
-            Navigation.PushAsync(new MainPage());
+            App.Games.Remove(_game);
+            NavigationPage nav = new NavigationPage(new MainPage() { Title = "Games" });
+            Application.Current.MainPage = nav;
+        }
+
+
+        private void cancel(object sender, EventArgs e)
+        {
+            NavigationPage nav = new NavigationPage(new MainPage() { Title = "Games" });
+            Application.Current.MainPage = nav;
         }
     }
 }

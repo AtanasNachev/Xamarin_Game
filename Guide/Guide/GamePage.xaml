@@ -19,6 +19,7 @@
                 HorizontalOptions="CenterAndExpand"></Label>
             <Button x:Name="RemoveGameButton" Clicked="RemoveGame" Text="Remove game from favorites"></Button>
             <Button x:Name="UpdateGameInfoButton" Clicked="updateGameInfo" Text="Update game information"></Button>
+            <Button x:Name="backButton" Clicked="back" Text="Go Back"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
