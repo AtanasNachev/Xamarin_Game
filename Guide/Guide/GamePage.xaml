@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Guide.GamePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                   x:Name="GameNameLabel"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="GameImageUrl"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand"></Image>
+            <Label x:Name="GameAnotation" 
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand"></Label>
+            <Button x:Name="RemoveGameButton" Clicked="RemoveGame" Text="Remove game from favorites"></Button>
+            <Button x:Name="UpdateGameInfoButton" Clicked="updateGameInfo" Text="Update game information"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
